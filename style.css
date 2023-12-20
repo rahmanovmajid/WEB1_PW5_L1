@@ -1,0 +1,60 @@
+body{
+    display:grid;
+    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-903ea3cb.jpg");
+    grid-template-areas: "header header header"
+    "nav article ads"
+    "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+header, footer, article, nav, aside {
+    padding: 0.5em;
+    border: 5px solid rgb(29, 112, 238);
+   
+    }s
+    #header {
+        grid-area: header;
+        text-align: center;
+        color:rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0);
+        padding-bottom: 20px;
+        }
+      #pageFooter {
+        grid-area: footer;
+        background-color: rgb(21, 197, 188);
+        color: rgb(255, 255, 255)
+        }
+      #mainArticle { 
+        grid-area: article; 
+        background-color: rgb(9, 240, 105);    
+        color: rgb(255, 255, 255); 
+        }
+      #mainNav { 
+        grid-area: nav; 
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 400%
+        
+        }
+      #siteAds { 
+        grid-area: ads; 
+        background-color: rgba(185, 29, 29, 0);
+        color : rgb(255, 255, 255)
+        } 
+      @media all and (max-width: 575px) {
+        body { 
+          grid-template-areas: 
+            "header"
+            "article"
+            "ads"
+            "nav"
+            "footer";
+          grid-template-rows: 80px 1fr 70px 1fr 70px;  
+          grid-template-columns: 1fr;
+       }
+      }
